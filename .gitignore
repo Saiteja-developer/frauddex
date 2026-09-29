@@ -1,0 +1,56 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ===== Secrets (never commit keys or passwords) =====
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# ===== Training data: datasets are large, have their own licences, and may hold personal data =====
+data/*
+!data/README.md
+!data/.gitkeep
+
+# ===== Trained models and caches: regenerate with `python run.py train` =====
+models/registry/*
+!models/registry/.gitkeep
+models/rag/*
+!models/rag/.gitkeep
+models/ocr/*
+!models/ocr/.gitkeep
+models/cost/
+*.joblib
+*.pkl
+
+# ===== Test-time material: real claims, patient documents, the database and outputs stay local =====
+*.db
+*.sqlite
+*.sqlite3
+test/cases/
+test/processed/*
+!test/processed/.gitkeep
+test/outputs/*
+!test/outputs/.gitkeep
+# (test/retrieval and test/samples ARE tracked: they hold the knowledge-base notes and made-up example files)
+
+# ===== Editors, OS, logs =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

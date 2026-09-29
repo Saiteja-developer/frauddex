@@ -1,0 +1,22 @@
+# REQUIRED for this phase (training and the terminal demo)
+pandas>=2.0
+numpy
+scipy
+scikit-learn>=1.3
+matplotlib
+joblib
+
+# OPTIONAL: more models in the model contest (picked up automatically if installed)
+xgboost
+lightgbm
+catboost
+imbalanced-learn
+
+# LATER PHASES (not needed yet)
+# streamlit        analyst dashboard
+# pdfplumber       read PDF reports
+# pypdf            PDF fallback
+# pillow           read images
+# pytesseract      read scans (also needs the Tesseract program)
+# opencv-python-headless
+# openpyxl         Excel files

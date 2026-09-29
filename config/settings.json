@@ -1,0 +1,76 @@
+{
+  "seed": 42,
+  "developer_passcode_env": "FRAUDDEX_DEV_PASS",
+  "developer_passcode_default": "dev",
+  "training": {
+    "models": [
+      "lr",
+      "svm",
+      "knn",
+      "nb",
+      "dt",
+      "rf",
+      "et",
+      "ada",
+      "gb",
+      "hgb",
+      "mlp",
+      "xgb",
+      "lgbm",
+      "cat"
+    ],
+    "imbalance": "class_weight",
+    "cv_folds": 3,
+    "test_size": 0.25,
+    "label_names": [
+      "is_fraud",
+      "fraud",
+      "potentialfraud",
+      "potential_fraud",
+      "label",
+      "target",
+      "class"
+    ]
+  },
+  "extraction": {
+    "ocr_engine": "auto",
+    "ocr_language": "eng",
+    "min_text_chars_per_pdf_page": 40,
+    "max_zip_files": 5000,
+    "max_zip_mb": 500
+  },
+  "image_ai": {
+    "backend": "forensics",
+    "_backend_help": "forensics = built-in checks, works offline with no install. ollama = local vision model (install Ollama + `ollama pull llava`). claude = Anthropic API (set ANTHROPIC_API_KEY). Ollama and claude add a written description of the document and extra abnormality checks.",
+    "ollama_url": "http://localhost:11434",
+    "ollama_model": "llava",
+    "claude_model": "claude-sonnet-5-5",
+    "timeout_seconds": 90
+  },
+  "case_scoring": {
+    "rule_influence": 0.8,
+    "rule_cap": 4.0,
+    "high_risk_level": 0.75,
+    "amount_mismatch_tolerance": 0.02,
+    "name_match_min": 0.8,
+    "min_cases_for_db_model_features": 20
+  },
+  "rag": {
+    "chunk_words": 120,
+    "chunk_overlap": 30,
+    "top_k": 4,
+    "llm": {
+      "enabled": false,
+      "backend": "ollama",
+      "model": "llama3",
+      "note": "Optional. Turns the structured explanation into a short written summary. Off by default; everything works without it."
+    }
+  },
+  "rule_discovery": {
+    "min_support": 15,
+    "min_precision": 0.35,
+    "min_lift": 3.0,
+    "min_novelty": 0.4,
+    "max_proposals": 8
+  }
+}
