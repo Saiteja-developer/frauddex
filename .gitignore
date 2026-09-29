@@ -54,6 +54,7 @@ test/processed/*
 !test/processed/.gitkeep
 test/outputs/*
 !test/outputs/.gitkeep
+!test/outputs/demo/
 # (test/retrieval and test/samples ARE tracked: they hold the knowledge-base notes and made-up example files)
 
 # ===== Editors, OS, logs =====
