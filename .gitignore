@@ -28,6 +28,15 @@ data/*
 # ===== Trained models and caches: regenerate with `python run.py train` =====
 models/registry/*
 !models/registry/.gitkeep
+# keep the charts and reports of each trained model, but not the model files themselves
+!models/registry/*/
+models/registry/*/*
+!models/registry/*/figures/
+!models/registry/*/report.html
+!models/registry/*/leaderboard.csv
+!models/registry/*/rule_stats.csv
+!models/registry/*/feature_importance.csv
+!models/registry/*/meta.json
 models/rag/*
 !models/rag/.gitkeep
 models/ocr/*

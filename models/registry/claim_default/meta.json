@@ -1,0 +1,57 @@
+{
+  "name": "claim_default",
+  "level": "claim",
+  "created": "2026-09-29 15:02",
+  "threshold": 0.59,
+  "rule_weight": 0.1,
+  "order": [
+    "ada",
+    "cat",
+    "xgb",
+    "hgb",
+    "lgbm"
+  ],
+  "n_features": 20,
+  "metrics": {
+    "champion": "Blend of AdaBoost, CatBoost, XGBoost, Hist Gradient Boosting, LightGBM",
+    "precision": 0.4,
+    "recall": 0.8864864864864865,
+    "f1": 0.5512605042016807,
+    "f2": 0.7130434782608696,
+    "auc": 0.967737431792533,
+    "ap": 0.7397635454141421,
+    "fpr": 0.10589754627636677,
+    "rules_only_f2": 0.534452296819788,
+    "n_train": 7492,
+    "n_test": 2508,
+    "fraud_rate": 0.0829,
+    "train_seconds": 193.9033637046814
+  },
+  "info": {
+    "builder": "claim",
+    "dropped_for_leakage": [
+      "Approved_Amount",
+      "Claim_Status"
+    ],
+    "imbalance": "class_weight",
+    "use_rule_features": true,
+    "use_anomaly": true,
+    "models_tried": [
+      "lr",
+      "svm",
+      "knn",
+      "nb",
+      "dt",
+      "rf",
+      "et",
+      "ada",
+      "gb",
+      "hgb",
+      "mlp",
+      "xgb",
+      "lgbm",
+      "cat"
+    ],
+    "cv": 3
+  }
+}

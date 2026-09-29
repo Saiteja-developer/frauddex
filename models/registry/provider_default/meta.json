@@ -1,0 +1,53 @@
+{
+  "name": "provider_default",
+  "level": "provider",
+  "created": "2026-09-29 14:58",
+  "threshold": 0.5599999999999999,
+  "rule_weight": 0.2,
+  "order": [
+    "hgb",
+    "et",
+    "ada",
+    "rf",
+    "xgb"
+  ],
+  "n_features": 48,
+  "metrics": {
+    "champion": "Blend of Hist Gradient Boosting, Extra Trees, AdaBoost, Random Forest, XGBoost",
+    "precision": 0.46443514644351463,
+    "recall": 0.8740157480314961,
+    "f1": 0.6065573770491803,
+    "f2": 0.7429718875502008,
+    "auc": 0.9494290375203915,
+    "ap": 0.7264008965060836,
+    "fpr": 0.10440456769983687,
+    "rules_only_f2": 0.5517633674630261,
+    "n_train": 4057,
+    "n_test": 1353,
+    "fraud_rate": 0.09353049907578559,
+    "train_seconds": 293.5875458717346
+  },
+  "info": {
+    "builder": "provider",
+    "imbalance": "class_weight",
+    "use_rule_features": true,
+    "use_anomaly": true,
+    "models_tried": [
+      "lr",
+      "svm",
+      "knn",
+      "nb",
+      "dt",
+      "rf",
+      "et",
+      "ada",
+      "gb",
+      "hgb",
+      "mlp",
+      "xgb",
+      "lgbm",
+      "cat"
+    ],
+    "cv": 3
+  }
+}
